@@ -1,13 +1,286 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+ 
+} 
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 6vh;
+  padding: 6px 7px;
+  background-color: darkgray;
+  align-items: center;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.leftnav {
+  display: flex;
+  width: 70%;
+  align-items: center;
 }
+.leftnav img {
+  margin-left: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.leftnav h2 {
+  margin-left: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px #ffffff;
+  font-family: cursive;
+}
+
+.rightnav {
+  width: 20%;
+
+}
+
+.rightnav input {
+  margin-left: 13rem;
+  
+  border-radius: 14px;
+  padding: 4px 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.display-area {
+  margin-top: 10px;
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+  float: left;
+  
+}
+
+.card {
+  width: 21vw;
+  height: 21vh;
+  margin: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  box-shadow: 1px 2px 4px 2px rgba(68, 52, 52, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.card .img-box {
+ 
+  width: 39%;
+  height: 98%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .img-box img {
+  
+  
+  width: 120px;
+  height: 135px;
+ 
+ box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.1);
+ border-radius: 15px;
+}
+.card .text-box {
+  color: rgba(77, 74, 74, 0.863);
+  width: 59%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+.card .text-box h2 {
+  margin-left: 4px;
+  margin-top: 4px;
+  font-size: 1rem;
+  width: 100%;
+  
+}
+
+.card .text-box h3 {
+  margin-top: 5px;
+  color: rgba(133, 130, 130, 0.863);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+}
+.card .text-box .user-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(241, 237, 237);
+  width: 98%;
+  height: 30%;
+  border-radius: 8px;
+  margin-bottom: 10px;  
+
+}
+.card .text-box .user-info .post , .card .text-box .user-info .followers , .card .text-box .user-info .rating {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  
+}
+.card .text-box .user-info .post h4 ,.card .text-box .user-info .followers h4 , .card .text-box .user-info .rating h4 {
+  font-size: 13px;
+  font-weight: 500;
+ 
+  margin-bottom: 0;
+}
+.card .text-box .user-info .post p , .card .text-box .user-info .followers p , .card .text-box .user-info .rating p{
+ 
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.player-card {
+  
+  max-width: 70%;
+  height: 90vh;
+  margin: auto;
+}
+.player-card .player-bio {
+  height: 38%;
+  display: flex;
+  justify-content: space-between;
+}
+.player-card .player-bio .img-box {
+  height: 100%;
+  width: 25%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.player-card .player-bio .img-box img {
+  width: 60%;
+  height: 60%;
+}
+.player-card .player-bio .img-box p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 10px;
+  color: rgb(68, 64, 64);
+  margin-bottom: 0;
+}
+.player-card .player-bio .img-box span {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 10px;
+  color: rgb(112, 110, 110);
+}
+.player-card .player-bio .bio-text {
+  max-height: 100%;
+  width: 55%;
+  margin-top: 5px;
+  margin-left: 90px;
+  background-color: rgb(241, 237, 237);
+  padding: 3px 7px;
+  border-radius: 12px;
+}
+.player-card .player-bio .bio-text .personal-info {
+  background-color: rgb(211, 209, 209);
+  color: rgb(68, 64, 64);
+  box-shadow: 2px 2px rgb(158, 154, 154);
+  
+}
+.player-card .player-bio .bio-text .personal-info h4 {
+  font-size: 1.3rem;
+}
+.player-card .player-bio .bio-text .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  
+}
+.bio-text .info h4 {
+  
+  font-weight: 600;
+  color: rgb(75, 71, 71);
+  font-size: 16px;
+  margin-top: 0;
+}
+.player-card .player-bio .bio-text .info-value{
+  
+  width: 83%;
+  margin-right: 5px;
+
+}
+.bio-text .info .info-value p {
+  color: rgb(75, 71, 71);
+  font-size: 15px;
+  margin-top: 0;
+  
+ 
+}
+.batting-stat {
+  background-color: rgb(94, 91, 91);
+  color: #ffffff;
+  padding-left: 8px;
+ 
+  
+}
+.batting-stat p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+  .tableblock {
+            margin-top: 9px;
+            
+        }
+        .table {
+            text-align: center;
+            margin: auto;
+            border-collapse: collapse;
+            width: 100%;
+            height: 25vh;
+        }
+        .table thead tr{
+            background-color:rgb(136, 135, 135);
+            text-align: center;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           font-size: 16px;
+        }
+        .table tbody tr{
+            border-bottom: 1px solid rgb(199, 185, 185);
+            background-color:rgb(219, 210, 210);
+            margin: 4px 12px;
+            font-size: 13px;
+
+        }
+        .table tbody tr:nth-of-type(even) {
+            background-color: rgba(228, 220, 220, 0.979);
+        }
+        .table tbody tr:last-of-type {
+            border-bottom: 4px solid rgb(136, 135, 135);
+        }
+        .table th {
+            color: white;
+            padding: 9px 10px;
+
+        }
+        .table td {
+            padding: 9px 10px;
+            color: rgb(88, 86, 86);
+        }
+
+
+

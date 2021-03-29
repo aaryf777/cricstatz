@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom'
+import Displaygit from './Displaygit';
+import Displayprofile from './Displayprofile';
+import Headtitle from './Headtitle';
+
 
 function App() {
+  const [inp, setInp] = useState('')
+  const inputChange = (event) => {
+    setInp(event.target.value);
+    console.log(inp);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Headtitle
+        func={inputChange}
+      />
+
+      <Switch>
+
+        <Route exact path='/' component={() =>
+          <Displaygit
+            userInp={inp}
+          />
+        } />
+
+        <Route path='/profile/:id' component={Displayprofile} />
+      </Switch>
+
+    </>
+
   );
 }
 
